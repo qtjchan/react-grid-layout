@@ -17,7 +17,7 @@ module.exports = {
         test: /\.jsx?$/,
         exclude: /node_modules/,
         loader: "babel-loader",
-        query: {
+        options: {
           cacheDirectory: true,
           plugins: [["react-hot-loader/babel"]]
         }
@@ -37,6 +37,7 @@ module.exports = {
     compress: true,
     port: 4002,
     open: true,
+    openPage: "index-dev.html",
     contentBase: "."
   },
   resolve: {

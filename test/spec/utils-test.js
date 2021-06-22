@@ -326,6 +326,33 @@ describe("moveElement", () => {
       expect.objectContaining({ x: 1, y: 0, w: 1, h: 2, i: "C" })
     ]);
   });
+
+  it("Allow overlapping the grid items", () => {
+    const layout = [
+      { x: 0, y: 0, w: 1, h: 10, i: "A" },
+      { x: 0, y: 10, w: 1, h: 1, i: "B" },
+      { x: 0, y: 11, w: 1, h: 1, i: "C" }
+    ];
+    // Move A down by 2. Both B and C should remain in same position
+    const itemA = layout[0];
+    expect(
+      moveElement(
+        layout,
+        itemA,
+        0,
+        2, // x, y
+        true,
+        true, // isUserAction, preventCollision
+        null,
+        10, // compactType, cols
+        true // allowOverlap
+      )
+    ).toEqual([
+      expect.objectContaining({ x: 0, y: 2, w: 1, h: 10, i: "A" }),
+      expect.objectContaining({ x: 0, y: 10, w: 1, h: 1, i: "B" }),
+      expect.objectContaining({ x: 0, y: 11, w: 1, h: 1, i: "C" })
+    ]);
+  });
 });
 
 describe("compact vertical", () => {
@@ -381,7 +408,7 @@ describe("compact horizontal", () => {
   it("compact horizontal should remove empty horizontal space to left of item", () => {
     const layout = [{ x: 5, y: 5, w: 1, h: 1, i: "1" }];
     expect(compact(layout, "horizontal", 10)).toEqual([
-      { x: 0, y: 0, w: 1, h: 1, i: "1", moved: false, static: false }
+      { x: 0, y: 5, w: 1, h: 1, i: "1", moved: false, static: false }
     ]);
   });
 

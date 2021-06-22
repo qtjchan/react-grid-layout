@@ -16,7 +16,7 @@ RGL is React-only and does not require jQuery.
 ![BitMEX UI](http://i.imgur.com/oo1NT6c.gif)
 > GIF from production usage on [BitMEX.com](https://www.bitmex.com)
 
-[**[Demo](https://strml.github.io/react-grid-layout/examples/0-showcase.html) | [Changelog](/CHANGELOG.md) | [CodeSandbox Editable demo](https://codesandbox.io/s/5wy3rz5z1x?module=%2Fsrc%2FShowcaseLayout.js)**]
+[**[Demo](https://react-grid-layout.github.io/react-grid-layout/) | [Changelog](/CHANGELOG.md) | [CodeSandbox Editable demo](https://codesandbox.io/s/5wy3rz5z1x?module=%2Fsrc%2FShowcaseLayout.js)**]
 
 ## Table of Contents
 
@@ -36,24 +36,25 @@ RGL is React-only and does not require jQuery.
 
 ## Demos
 
-1. [Showcase](https://strml.github.io/react-grid-layout/examples/0-showcase.html)
-1. [Basic](https://strml.github.io/react-grid-layout/examples/1-basic.html)
-1. [No Dragging/Resizing (Layout Only)](https://strml.github.io/react-grid-layout/examples/2-no-dragging.html)
-1. [Messy Layout Autocorrect](https://strml.github.io/react-grid-layout/examples/3-messy.html)
-1. [Layout Defined on Children](https://strml.github.io/react-grid-layout/examples/4-grid-property.html)
-1. [Static Elements](https://strml.github.io/react-grid-layout/examples/5-static-elements.html)
-1. [Adding/Removing Elements](https://strml.github.io/react-grid-layout/examples/6-dynamic-add-remove.html)
-1. [Saving Layout to LocalStorage](https://strml.github.io/react-grid-layout/examples/7-localstorage.html)
-1. [Saving a Responsive Layout to LocalStorage](https://strml.github.io/react-grid-layout/examples/8-localstorage-responsive.html)
-1. [Minimum and Maximum Width/Height](https://strml.github.io/react-grid-layout/examples/9-min-max-wh.html)
-1. [Dynamic Minimum and Maximum Width/Height](https://strml.github.io/react-grid-layout/examples/10-dynamic-min-max-wh.html)
-1. [No Vertical Compacting (Free Movement)](https://strml.github.io/react-grid-layout/examples/11-no-vertical-compact.html)
-1. [Prevent Collision](https://strml.github.io/react-grid-layout/examples/12-prevent-collision.html)
-1. [Error Case](https://strml.github.io/react-grid-layout/examples/13-error-case.html)
-1. [Toolbox](https://strml.github.io/react-grid-layout/examples/14-toolbox.html)
-1. [Drag From Outside](https://strml.github.io/react-grid-layout/examples/15-drag-from-outside.html)
-1. [Bounded Layout](https://strml.github.io/react-grid-layout/examples/16-bounded.html)
-1. [Resizable Handles](https://strml.github.io/react-grid-layout/examples/17-resizable-handles.html)
+1. [Showcase](https://react-grid-layout.github.io/react-grid-layout/examples/0-showcase.html)
+1. [Basic](https://react-grid-layout.github.io/react-grid-layout/examples/1-basic.html)
+1. [No Dragging/Resizing (Layout Only)](https://react-grid-layout.github.io/react-grid-layout/examples/2-no-dragging.html)
+1. [Messy Layout Autocorrect](https://react-grid-layout.github.io/react-grid-layout/examples/3-messy.html)
+1. [Layout Defined on Children](https://react-grid-layout.github.io/react-grid-layout/examples/4-grid-property.html)
+1. [Static Elements](https://react-grid-layout.github.io/react-grid-layout/examples/5-static-elements.html)
+1. [Adding/Removing Elements](https://react-grid-layout.github.io/react-grid-layout/examples/6-dynamic-add-remove.html)
+1. [Saving Layout to LocalStorage](https://react-grid-layout.github.io/react-grid-layout/examples/7-localstorage.html)
+1. [Saving a Responsive Layout to LocalStorage](https://react-grid-layout.github.io/react-grid-layout/examples/8-localstorage-responsive.html)
+1. [Minimum and Maximum Width/Height](https://react-grid-layout.github.io/react-grid-layout/examples/9-min-max-wh.html)
+1. [Dynamic Minimum and Maximum Width/Height](https://react-grid-layout.github.io/react-grid-layout/examples/10-dynamic-min-max-wh.html)
+1. [No Vertical Compacting (Free Movement)](https://react-grid-layout.github.io/react-grid-layout/examples/11-no-vertical-compact.html)
+1. [Prevent Collision](https://react-grid-layout.github.io/react-grid-layout/examples/12-prevent-collision.html)
+1. [Error Case](https://react-grid-layout.github.io/react-grid-layout/examples/13-error-case.html)
+1. [Toolbox](https://react-grid-layout.github.io/react-grid-layout/examples/14-toolbox.html)
+1. [Drag From Outside](https://react-grid-layout.github.io/react-grid-layout/examples/15-drag-from-outside.html)
+1. [Bounded Layout](https://react-grid-layout.github.io/react-grid-layout/examples/16-bounded.html)
+1. [Resizable Handles](https://react-grid-layout.github.io/react-grid-layout/examples/17-resizable-handles.html)
+1. [Scaled Containers](https://react-grid-layout.github.io/react-grid-layout/examples/18-scale.html)
 
 #### Projects Using React-Grid-Layout
 
@@ -72,6 +73,7 @@ RGL is React-only and does not require jQuery.
 - [Quadency](https://quadency.com/)
 - [Hakkiri](https://www.hakkiri.io)
 - [Ubidots](https://help.ubidots.com/en/articles/2400308-create-dashboards-and-widgets)
+- [Statsout](https://statsout.com/)
 
 *Know of others? Create a PR to let me know!*
 
@@ -90,11 +92,12 @@ RGL is React-only and does not require jQuery.
 * Separate layouts per responsive breakpoint
 * Grid Items placed using CSS Transforms
   * Performance with CSS Transforms: [on](http://i.imgur.com/FTogpLp.jpg) / [off](http://i.imgur.com/gOveMm8.jpg), note paint (green) as % of time
+* Compatibility with `<React.StrictMode>`
 
 |Version         | Compatibility    |
 |----------------|------------------|
-| >= 0.17.0      | React 0.16       |
-| >= 0.11.3      | React 0.14 & v15 |
+| >= 0.17.0      | React 16 & 17    |
+| >= 0.11.3      | React 0.14 & 15  |
 | >= 0.10.0      | React 0.14       |
 | 0.8. - 0.9.2   | React 0.13       |
 | < 0.8          | React 0.12       |
@@ -263,15 +266,13 @@ cols: ?number = 12,
 // A CSS selector for tags that will not be draggable.
 // For example: draggableCancel:'.MyNonDraggableAreaClassName'
 // If you forget the leading . it will not work.
+// .react-resizable-handle" is always prepended to this value.
 draggableCancel: ?string = '',
 
 // A CSS selector for tags that will act as the draggable handle.
 // For example: draggableHandle:'.MyDragHandleClassName'
 // If you forget the leading . it will not work.
 draggableHandle: ?string = '',
-
-// If true, the layout will compact vertically
-verticalCompact: ?boolean = true,
 
 // Compaction type.
 compactType: ?('vertical' | 'horizontal') = 'vertical';
@@ -342,7 +343,10 @@ isDroppable: ?boolean = false
 // 'ne' - Northeast handle (top-right)
 resizeHandles: ?Array<'s' | 'w' | 'e' | 'n' | 'sw' | 'nw' | 'se' | 'ne'> = ['se']
 // Custom component for resize handles
-resizeHandle?: ReactElement<any> | ((resizeHandleAxis: ResizeHandleAxis) => ReactElement<any>)
+// See `handle` as used in https://github.com/react-grid-layout/react-resizable#resize-handle
+// Your component should have the class `.react-resizable-handle`, or you should add your custom
+// class to the `draggableCancel` prop.
+resizeHandle?: ReactElement<any> | ((resizeHandleAxis: ResizeHandleAxis, ref: ReactRef<HTMLElement>) => ReactElement<any>)
 
 //
 // Callbacks
@@ -371,8 +375,17 @@ onResizeStart: ItemCallback,
 onResize: ItemCallback,
 // Calls when resize is complete.
 onResizeStop: ItemCallback,
+
+//
+// Dropover functionality
+//
+
 // Calls when an element has been dropped into the grid from outside.
 onDrop: (layout: Layout, item: ?LayoutItem, e: Event) => void
+// Calls when an element is being dragged over the grid from outside as above.
+// This callback should return an object to dynamically change the droppingItem size
+// Return false to short-circuit the dragover
+onDropDragOver: (e: DragOverEvent) => ?({|w?: number, h?: number|} | false);
 
 // Ref for getting a reference for the grid's wrapping div.
 // You can use this instead of a regular ref and the deprecated `ReactDOM.findDOMNode()`` function.
@@ -505,6 +518,29 @@ function MyGrid(props) {
 ```
 
 Because the `children` prop doesn't change between rerenders, updates to `<MyGrid>` won't result in new renders, improving performance.
+
+### Custom Child Components and Draggable Handles
+
+If you use React Components as grid children, they need to do a few things:
+
+1. Forward refs to an underlying DOM node, and
+2. Forward `style` and `className` to that same DOM node.
+
+For example:
+
+```js
+const CustomGridItemComponent = React.forwardRef(({style, className, ...props}, ref) => {
+  return (
+    <div style={{ /* styles */, ...style}} className={className} ref={ref}>
+      {/* Some other content */}
+    </div>  
+  );
+}
+```
+
+The same is true of custom elements as draggable handles using the `draggableHandle` prop. This is so that
+the underlying `react-draggable` library can get a reference to the DOM node underneath, manipulate
+positioning via `style`, and set classes.
 
 ## Contribute
 

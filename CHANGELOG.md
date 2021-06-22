@@ -1,5 +1,65 @@
 # Changelog
 
+1.2.5 (May 10, 2021)
+---
+
+### Bugfixes
+  - Ensure no negative positions are possible when compacting
+    - Thanks @DonnyLi [#829](https://github.com/react-grid-layout/react-grid-layout/pull/829)
+    - Fixes [#535](https://github.com/react-grid-layout/react-grid-layout/issues/535)
+  - Fix resizing on mobile. This was caused by the `ref` refactor to remove ReactDOM in 1.2.3.
+    - Fixes #[1458](https://github.com/react-grid-layout/react-grid-layout/issues/1458)
+    - Note: this upgrades `react-resizable` to `3.0.1`, which like our other deps, is only compatible with `React@>=16.3`.
+
+### Documentation
+  - Document new arity of `resizeHandle` (`(axis: ResizeHandleAxis, ref: ReactRef<HTMLElement>) => React$Element`)
+  - Remove references to the deprecated `verticalCompact` prop
+
+1.2.4 (Mar 18, 2021)
+---
+
+*This version fixes a serious render bug in `<WidthProvider>`. 1.2.3 should not be used.*
+
+### Bugfixes
+  - Fix failure to mount when layout is WidthProvider-wrapped and `measureBeforeMount` is `true`.
+    - Ref: [#1428](https://github.com/react-grid-layout/react-grid-layout/issues/1428)
+  - `<WidthProvider>` no longer updates grid with if it has been set to 0. This prevents unnecessary updates
+    if the grid is set to `display: none;`. Thanks @405go [#1427](https://github.com/react-grid-layout/react-grid-layout/pull/1427)
+
+1.2.3 (Mar 16, 2021)
+---
+
+### New Features
+  - React-Grid-Layout is now fully compatible with `<React.StrictMode>`.
+    - Usage of `ReactDOM` has been removed by using `React.createRef()` inside RGL, and the new [`nodeRef` prop](https://github.com/react-grid-layout/react-draggable/blob/master/CHANGELOG.md#440-may-12-2020) in `react-draggable`.
+
+1.2.2 (Mar 1, 2021)
+---
+
+### Bugfixes
+  - `onResize` as changed in 1.2.1 did not correctly save the layout. This is now fixed.
+    - As you might guess, we need more test coverage! PRs are very welcome, I'll buy you beers on Cashapp or Patreon or whatever you like.
+
+1.2.1 (Mar 1, 2021)
+---
+
+## Organization Changes
+
+We have created the [React-Grid-Layout Organization](https://github.com/react-grid-layout)! Therefore the repository
+[has moved](https://github.com/react-grid-layout/react-grid-layout).
+
+This organization will grow as time goes on, and also contains the dependencies of RGL.
+
+### Bugfixes
+  - Use `classList` in Firefox onDragOver hack. [#1310](https://github.com/STRML/react-grid-layout/pull/1310)
+  - Fix `scale` property. As `scale` support was added to dependencies, this caused double-compensation for scale, causing the dragged element not to follow the cursor. [#1393](https://github.com/STRML/react-grid-layout/pull/1393)
+  - Fix horizontal compact mode issue where it inadventently would compact the bottom of the grid. This is not useful nor intended. Thanks @s4m3. [#1390](https://github.com/STRML/react-grid-layout/pull/1390)
+  - Fix `onLayoutChange` sometimes not triggering on resize. We weren't cloning the layout item before modifying it. Thanks @xcqwan. [#1289](https://github.com/react-grid-layout/react-grid-layout/pull/1289)
+
+### Internal Refactors
+  - Updated to the latest versions of all dependencies (enzyme, webpack, jest, flow).
+  - Held back React@17 as enzyme is [not yet ready](https://github.com/enzymejs/enzyme/issues/2429).
+
 1.2.0 (Nov 17, 2020)
 ---
 
